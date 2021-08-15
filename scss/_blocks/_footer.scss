@@ -1,0 +1,135 @@
+//  FOOTER =============
+#footer {
+    background-color: #002529;
+    
+}
+.footer__wrapper {
+    padding-top: 66px;
+    padding-bottom: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.footer__logo-link {
+    @include reset-link;
+    margin-bottom: 24px;
+}
+.footer-nav__list {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.footer-nav__item ~ .footer-nav__item {
+    margin-left: 24px;
+}
+.footer-nav__link {
+    @include reset-link;
+    font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 25px;
+color: $color-text;
+transition: all 0.3s ease;
+}
+.footer-nav__item:hover .footer-nav__link {
+    color: $color-text-hover;
+}
+.footer-nav__item:active .footer-nav__link {
+    transform: scale(0.9);
+}
+.footer__address   {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+    color: $color-text;
+    margin-bottom: 40px;
+}
+.footer__social-box {
+    @include reset-list;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-box__img {
+    transition: all 0.3s ease;
+}
+.social-box__img:hover path {
+    fill: $color-text-hover;
+}
+.social-box__item ~ .social-box__item{
+    margin-left: 16px;
+}
+.footer__text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    color: $color-text;
+    mix-blend-mode: normal;
+    opacity: 0.6;
+}
+
+// FOOTER =============
+
+@include breakpoint-up (600px) {
+    .footer__wrapper {
+        display: block;
+    }
+    .footer-nav__list {
+        justify-content: flex-start;
+        position: relative;
+        margin: 0;
+        margin-top: 25px;
+    }
+    .footer__address {
+        text-align: right;
+        margin-top: -110px;
+    }
+    .footer__social-box {
+        justify-content: flex-start;
+    }
+    .footer__text {
+        text-align: right;
+        position: absolute;
+        right: 0;
+        bottom: 60px;
+    }
+}
+@include breakpoint-up (770px) {
+    .footer__wrapper {
+        display: block;
+    }
+    .footer-nav__list {
+        justify-content: flex-start;
+        position: relative;
+        margin: 0;
+    }
+    .footer__address {
+        text-align: center;
+        position: absolute;
+        margin: 0;
+        top: 66px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    .footer__social-box {
+        justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        top: 68px;
+    }
+    .footer__text {
+        text-align: right;
+        // position: absolute;
+        // top: 55px;
+    }
+}

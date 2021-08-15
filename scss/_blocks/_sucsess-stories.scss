@@ -1,0 +1,108 @@
+// SUCSESS STORIES =====
+
+#sucsess-stories {
+    background-color: #004047;
+    background-image: url(../images/sucsess-stories-bg-top-img.png),
+    url(../images/sucsess-stories-bg-bottom-img.png);
+    background-size: 147px 100px, 200px 100px;
+    background-position: left 0 top 0, bottom 0 right 0;
+    background-repeat: no-repeat;
+}
+.sucsess-stories__wrapper {
+    padding-top: 140px;
+    padding-bottom: 140px;
+    display: block;
+}
+.sucsess-stories__title  {
+    max-width: 530px;
+    margin-left: auto;
+    margin-right: auto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: $color-text;
+    margin-bottom: 84px;
+}
+.sucsess-stories__title--blue {
+    color: #79C8C7;
+}
+.sucsess-stories__list {
+    @include reset-list;
+}
+.sucsess-stories__item::before {
+    background-image: url(../images/comma.png);
+    background-size: 67px 56px;
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 56px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -21px;
+    content: "";
+}
+.sucsess-stories__item:not(:last-child) {
+    margin-bottom: 80px;
+}
+.sucsess-stories__item-text {
+    max-width: 534px;
+    color: $color-text;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    text-align: center;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+}
+.sucsess-stories__item-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    color: #79C8C7;
+    display: block;
+    margin-bottom: 2px;
+}
+.sucsess-stories__item-subtitle {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    color: $color-text;
+    display: block;
+}
+.sucsess-stories__item-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+}
+
+
+
+//  MEDIA ============
+
+@include breakpoint-up (920px) {
+    .sucsess-stories__title {
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 48px;
+        text-align: center;
+        max-width: 900px;
+    } 
+    .sucsess-stories__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .sucsess-stories__item ~ .sucsess-stories__item {
+        margin-left: 40px;
+    }
+}

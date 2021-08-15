@@ -1,0 +1,20 @@
+// RESET LIST=======
+@mixin reset-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+// RESET LINK ======
+@mixin reset-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+// ======   MEDIA =======
+
+@mixin breakpoint-up ($media-screen) {
+    @media only screen and (min-width: $media-screen) {
+        @content
+    }
+}
