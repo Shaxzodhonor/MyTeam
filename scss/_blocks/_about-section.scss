@@ -1,0 +1,101 @@
+#about {
+    background-color: #014E56;
+
+    background-image:  url(../images/about-sec-bg-img.png );
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+    background-position:  right -100px bottom -100px;
+}
+.about__wrapper {
+    padding-top: 48px;
+    padding-bottom: 108px;
+    // background-image: url(../images/hero-bg-img-2.png);
+    // background-repeat: no-repeat;
+    // background-size: 310px auto;
+    // background-position: bottom 0px center;
+}
+.about__hero-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about__hero-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: $color-text;
+    margin-bottom: 18px;
+}
+.about__hero-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+    max-width: 457px;
+}
+
+//   ===============  MEDIA =============
+
+@include breakpoint-up (426PX) {
+    
+    .about__hero-title {
+        font-size: 58px;
+        line-height: 56px;
+    }
+}
+@include breakpoint-up (600PX) {
+    .about__hero-title {
+        font-size: 64px;   
+    }
+}
+@include breakpoint-up (650PX) {
+    #about {
+        background-image:  url(../images/about-sec-bg-img.png );
+        background-repeat: no-repeat;
+        background-size: 200px 200px;
+        background-position:  right -100px bottom 0px;
+    }
+}
+@include breakpoint-up (770PX) {
+    .about__hero-text  {
+        max-width: 580px;
+      }
+}
+   
+@include breakpoint-up (1000px) {
+ 
+    .about__hero-wrapper {
+       flex-direction: row;
+       align-items: center;    
+    }
+    .about__hero-title {
+        font-size: 64px;   
+        line-height: 100px;
+        margin: 0;
+        margin-right: 180px;
+    }
+    .about__hero-text  {
+        max-width: 580px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .about__hero-text::before {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 4px;
+          background-color: #F67E7E;
+          margin-bottom: 35px;
+      }
+}
+@include breakpoint-up (1100PX) {
+    .about__hero-text  {
+        max-width: 675px;
+      }
+}

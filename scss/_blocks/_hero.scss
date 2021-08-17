@@ -1,0 +1,113 @@
+.hero {
+    background-color: #014E56;
+}
+.hero__wrapper {
+    padding-top: 48px;
+    padding-bottom: 197px;
+    background-image: url(../images/hero-bg-img-2.png);
+    background-repeat: no-repeat;
+    background-size: 310px auto;
+    background-position: bottom 0px center;
+}
+
+
+
+// HERO CONTENT  ===========
+
+// .hero__content {
+
+// }
+.hero__title {
+    max-width: 200px;
+    font-style: normal;
+font-weight: bold;
+font-size: 40px;
+line-height: 40px;
+color: $color-text;
+text-align: center;
+margin: 0;
+margin-bottom: 18px;
+margin-left: auto;
+margin-right: auto;
+}
+.hero__title--red-word {
+    color:#F67E7E;
+}
+
+.hero__text {
+    font-style: normal;
+font-weight: 600;
+font-size: 15px;
+line-height: 28px;
+color: $color-text;
+text-align: center;
+margin: 0;
+}
+
+//   ===============  MEDIA =============
+
+@include breakpoint-up (426PX) {
+     
+    .hero__title {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 64px;
+        line-height: 56px;
+    }
+}
+@include breakpoint-up (600PX) {
+.hero__title {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 64px;
+        line-height: 56px;
+    }
+    .hero__text {
+        width: 430px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+ 
+}
+@include breakpoint-up (1000px) {
+    .hero {
+        background-image:  url(../images/hero-bg-img-left.png);
+    background-repeat: no-repeat;
+    background-size: 100px auto;
+    background-position:  left center;
+    }
+    .hero__wrapper {
+        background-position: bottom 0 right 60px;
+    }
+    .hero__content {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    .hero__title {
+        max-width: 635px;
+        font-weight: bold;
+        font-size: 100px;
+        line-height: 100px;
+        text-align: left;
+        margin: 0;
+    }
+    .hero__text  {
+        max-width: 400px;
+        text-align: left;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        margin: 0;
+      }
+      .hero__text::before {
+          content: "";
+          display: block;
+          width: 50px;
+          height: 4px;
+          background-color: #79C8C7;
+          margin-bottom: 70px;
+      }
+}

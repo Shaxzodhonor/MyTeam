@@ -1,9 +1,9 @@
 //  FOOTER =============
-#footer {
+#site-footer {
     background-color: #002529;
     
 }
-.footer__wrapper {
+.site-footer__wrapper {
     padding-top: 66px;
     padding-bottom: 66px;
     display: flex;
@@ -11,7 +11,7 @@
     align-items: center;
     position: relative;
 }
-.footer__logo-link {
+.site-footer__logo-link {
     @include reset-link;
     margin-bottom: 24px;
 }
@@ -26,19 +26,18 @@
 .footer-nav__item ~ .footer-nav__item {
     margin-left: 24px;
 }
-.footer-nav__link {
+.footer-item__link {
     @include reset-link;
     font-style: normal;
-font-weight: 600;
-font-size: 15px;
-line-height: 25px;
-color: $color-text;
-transition: all 0.3s ease;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
 }
-.footer-nav__item:hover .footer-nav__link {
+.footer-nav__item:hover .footer-item__link {
     color: $color-text-hover;
 }
-.footer-nav__item:active .footer-nav__link {
+.footer-nav__item:active .footer-item__link {
     transform: scale(0.9);
 }
 .footer__address   {
@@ -81,7 +80,7 @@ transition: all 0.3s ease;
 // FOOTER =============
 
 @include breakpoint-up (600px) {
-    .footer__wrapper {
+    .site-footer__wrapper{
         display: block;
     }
     .footer-nav__list {
@@ -105,7 +104,7 @@ transition: all 0.3s ease;
     }
 }
 @include breakpoint-up (770px) {
-    .footer__wrapper {
+    .site-footer__wrapper {
         display: block;
     }
     .footer-nav__list {

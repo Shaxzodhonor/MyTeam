@@ -11,6 +11,48 @@
     text-decoration: none;
 }
 
+// SITE BUTTONS ===========
+
+@mixin site-header-button
+ {
+     @include reset-link;
+    display: block;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+    color: $color-text;
+    padding: 8px 32px;
+    font-size: 18px;
+    line-height: 28px;
+    background: #014E56;
+    font-style: normal;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+@mixin site-header-button-hover
+{
+    background-color: #fff;
+    color: #002529;
+    cursor: pointer;
+}
+@mixin site-ready-section-button {
+    @include reset-link;
+    border: 2px solid #012F34;
+    background: #F67E7E;
+    padding: 9px 33px 11px 32px;
+    border-radius: 24px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #012F34;
+    outline: none;
+    transition: all 0.3s ease;
+}
+@mixin site-ready-section-button-hover {
+    background-color: #012F34;
+    color: $color-text;
+    cursor: pointer;
+}
 // ======   MEDIA =======
 
 @mixin breakpoint-up ($media-screen) {
@@ -18,3 +60,8 @@
         @content
     }
 }
+
+
+
+
+
