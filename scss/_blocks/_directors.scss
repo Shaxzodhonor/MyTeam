@@ -28,12 +28,32 @@
     align-items: center;
 }
 .directors__item {
+    position: relative;
     background-color: #012F34;
     padding: 32px 24px 56px 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+.plus{
+    width: 56px;
+    height: 56px;
+    display: block;
+    position: absolute;
+    top: 100%;
+    transform: translateY(-50%);
+    content: "";
+    transition: color 3s;
+}
+.plus:hover .circle {
+    fill: #79C8C7;
+}
+.circle-x {
+    transform: rotate(45deg) translateY(-70%);
+}
+.plus:hover .circle-bl {
+    fill: #F67E7E;
 }
 .directors__item ~ .directors__item {
     margin-top: 52px;
